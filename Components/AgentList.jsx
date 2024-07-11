@@ -13,11 +13,11 @@ const AgentList = () => {
 
     const fetchAgents = async () => {
       try {
-        const repsonse = await fetch(apiUrl);
-        if (!repsonse.ok) {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
           throw new Error("Something went wrong");
         }
-        const result = await repsonse.json();
+        const result = await response.json();
         setAgents(result.data);
         setLoading(false);
       } catch (error) {
@@ -32,7 +32,7 @@ const AgentList = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div className="grid grid-cols-4 gap-y-7 gap-x-5 px-[250px] mt-10 mb-10">
+        <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-y-7 gap-x-5 px-4 sm:px-8 lg:px-16 xl:px-24 mt-10 mb-10">
           {agents.map((agent) => (
             <AgentCard
               key={agent.uuid}
