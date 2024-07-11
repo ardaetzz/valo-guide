@@ -10,7 +10,7 @@ const AgentList = () => {
 
   useEffect(() => {
     const apiUrl =
-      "https://valorant-api.com/v1/agents?isPlayableCharacter=true";
+      "https://valorant-api.com/v1/agents?language=en-US&isPlayableCharacter=true";
 
     const fetchAgents = async () => {
       try {
