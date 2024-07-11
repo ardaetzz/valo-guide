@@ -16,7 +16,7 @@ const AgentCard = ({ agentName, description, agentIconUrl }) => {
         </div>
         <div className="px-7 py-3">
           <h2 className="text-center py-2 font-bold text-2xl">{agentName}</h2>
-          <p>{description}</p>
+          <p className="text-center">{description}</p>
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import AgentCard from "./AgentCard";
+import LoadingSpinner from "./LoadingSpinner";
 
 const AgentList = () => {
   const [agents, setAgents] = useState([]);
@@ -30,7 +31,7 @@ const AgentList = () => {
   return (
     <>
       {loading ? (
-        <p>Loading...</p>
+        <LoadingSpinner />
       ) : (
         <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-y-7 gap-x-5 px-4 sm:px-8 lg:px-16 xl:px-24 mt-10 mb-10">
           {agents.map((agent) => (
